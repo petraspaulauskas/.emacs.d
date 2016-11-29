@@ -1,0 +1,7 @@
+create table if not exists camera_time_snapshot (
+       id bigserial primary key,
+       request_time timestamp without not null,
+       reported_time timestamp without not null,
+       response_time timestamp without not null,
+       camera_id int references camera(id) not null
+);

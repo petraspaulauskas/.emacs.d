@@ -1,0 +1,32 @@
+(ns average-speed.service.time-sync
+  (:require [clojurewerkz.quartzite.scheduler :as qs]
+            [clojurewerkz.quartzite.triggers :as t]
+            [clojurewerkz.quartzite.jobs :as j]
+            [clojurewerkz.quartzite.schedule.simple :as ss]
+            [clojure.tools.logging :as log]))
+
+(j/defjob TimeSync
+  [ctx]
+  (log/info "Sync time job"))
+
+(defn- time-sync-job []
+  (j/build
+   (j/of-type TimeSync)
+   (j/with-identity (j/key "jobs.timesync"))))
+
+(defn- time-sync-trigger [interval-in-millis]
+  (t/build
+   (t/with-identity (t/key "triggers.timesync"))
+   (t/start-now)
+   (t/with-schedule (ss/schedule
+                     (ss/with-interval-in-milliseconds interval-in-millis)))))
+
+(defn create-jobs-scheduler [cfg]
+  (let [state (atom nil)]
+    {:start-fn #(swap!
+                 state
+                 (constantly
+                  (let [scheduler (qs/initialize (qs/start))]
+                    (qs/schedule scheduler (time-sync-job) (time-sync-trigger (:sync-inteval cfg)))
+                    scheduler)))
+     :stop-fn #(swap! state (constantly (qs/shutdown @state)))}))

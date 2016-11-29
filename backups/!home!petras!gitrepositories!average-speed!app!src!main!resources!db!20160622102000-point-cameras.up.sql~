@@ -1,0 +1,10 @@
+create table point_cameras (
+       route_id int references route(id) not null,
+       camera_id int references camera(id) not null
+);
+--;;
+delete from route;
+--;;
+alter table route drop column start_camera;
+--;;
+alter table route drop column finish_camera;

@@ -1,0 +1,33 @@
+(ns average-speed.db-test.route
+  (:require [clojure.test :refer :all]
+            [average-speed.db-test.test-helpers :as th]
+            [average-speed.db.route :as r]
+            [average-speed.db.camera :as c]))
+
+(use-fixtures :each th/setup-db-fixture)
+
+(deftest route-test
+  (testing "Finds route for camera"
+    (c/insert-new! {:id                    1
+                    :serial_no             "no1"
+                    :metrological_check_no "nn"
+                    :ip                    "127.0.0.1"})
+    (c/insert-new! {:id                    2
+                    :serial_no             "no2"
+                    :metrological_check_no "na"
+                    :ip                    "127.0.0.1"})
+    (c/insert-new! {:id              3
+                    :start_lat       0.0M
+                    :start_lon       0.0M
+                    :start_camera    1
+                    :finish_lat      0.0M
+                    :finish_lon      0.0M
+                    :finish_camera   2
+                    :distance        2000M
+                    :speed_limit     50M
+                    :speed_threshold 10M
+                    :address         "adr"
+                    :is_enabled      true})
+    (let [found (r/search-for-camera "no2")]
+      (is (= (:start_camera_serial "no1")))
+      (is (= (:end_camera_serial "no2"))))))

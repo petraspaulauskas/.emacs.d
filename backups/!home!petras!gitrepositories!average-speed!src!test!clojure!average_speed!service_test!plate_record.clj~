@@ -1,0 +1,97 @@
+(ns average-speed.service-test.plate-record
+  (:require [clojure.test :refer :all]
+            [average-speed.service.plate-record :as pr]
+            [average-speed.db.plate-record :as rd]
+            [clj-time.core :as t]))
+
+(deftest plate-record-service-test
+  (testing "Gets records for single route and record"
+    (with-redefs [rd/get-for-plate-after (fn [plate-number time serial]
+                                           (list {:plate_number     plate-number
+                                                  :decode_time      time
+                                                  :camera_serial_no serial
+                                                  :id               1}
+                                                 {:plate_number     plate-number
+                                                  :decode_time      time
+                                                  :camera_serial_no serial
+                                                  :id               2}))]
+      (let [matching-record (pr/get-matching-records
+                             {:start_camera_serial "st1"
+                              :end_camera_serial   "st2"
+                              :distance            25000M
+                              :speed_limit         50M
+                              :name                "route"}
+                             "st1"
+                             {:plate_number "QWE222"
+                              :decode_time  (t/date-time 2016 02 27 12 00 000)})
+            plates          (:plates (first matching-record))]
+        (is (= (get-in matching-record [:route :name]) "route"))
+        (is (= (count plates) 1))
+        (is (= (count (:records (first plates))) 2))
+        (is (= (:id (first (:records (first plates)))) 1))
+        (is (= (:camera_serial_no (first (:records (first plates)))) "st2"))
+        (is (= (:id (last (:records (first plates)))) 2))
+        (is (= (:decode_time (first (:records (first plates))))
+               (t/date-time 2016 02 27 11 15 000))))))
+  (testing "Gets records for single route and multiple records"
+    (with-redefs [rd/get-for-plate-after (fn [plate-number time serial]
+                                           (if (= plate-number "ABC123")
+                                             (list {:plate_number     plate-number
+                                                    :decode_time      time
+                                                    :camera_serial_no serial
+                                                    :id               1})
+                                             (list)))]
+      (let [matching-record (pr/get-matching-records
+                             {:start_camera_serial "st1"
+                              :end_camera_serial   "st2"
+                              :distance            25000M
+                              :speed_limit         50M
+                              :name                "route"}
+                             "st1"
+                             (list {:plate_number "SDA234"
+                                    :decode_time  (t/date-time 2016 02 27 12 00 000)}
+                                   {:plate_number "ABC123"
+                                    :decode_time  (t/date-time 2016 02 27 12 00 000)}))
+            plates          (:plates (first matching-record))]
+        (is (= (count matching-record) 1))
+        (is (= (count plates) 2))
+        (is (= (count (:records (first plates))) 0))
+        (is (= (count (:records (last plates)) 1))))))
+  (testing "Gets records for multiple routes and multiple records"
+    (with-redefs [rd/get-for-plate-after (fn [plate-number time serial]
+                                           (if (= serial "st1")
+                                             (list {:plate_number     plate-number
+                                                    :decode_time      time
+                                                    :camera_serial_no serial}
+                                             (if (and
+                                                  (= serial "st3")
+                                                  (= plate-number "ABC123"))
+                                               (list {:plate_number     plate-number
+                                                      :decode_time      time
+                                                      :camera_serial_no serial})
+                                               (list))))]
+      (let [matching-records (pr/get-matching-records
+                              (list {:start_camera_serial "st1"
+                                     :end_camera_serial   "st2"
+                                     :distance            25000M
+                                     :speed_limit         50M
+                                     :name                "route1"}
+                                    {:start_camera_serial "st2"
+                                     :end_camera_serial   "st3"
+                                     :distance            25000M
+                                     :speed_limit         50M
+                                     :name                "route2"})
+                              "st2"
+                              (list {:plate_number "ADD234"
+                                     :decode_time  (t/date-time 2016 02 27 12 00 000)}
+                                    {:plate_number "ABC123"
+                                     :decode_time  (t/date-time 2016 02 27 12 00 000)}))]
+        (is (= (count matching-records) 2))
+        (is (= (count (:plates (first matching-records))) 2))
+        (is (= (count (:plates (last matching-records)) 2)))
+        (is (= (count (:records (first (:plates (first matching-records))))) 1))
+        (is (= (count (:records (last (:plates (first matching-records))))) 1))
+        (is (= (count (:records (first (:plates (last matching-records))))) 1))
+        (is (= (count (:records (last (:plates (last matching-records))))) 1))))))
+
+

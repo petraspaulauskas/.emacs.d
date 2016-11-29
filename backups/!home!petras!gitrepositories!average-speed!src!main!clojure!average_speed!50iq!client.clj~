@@ -1,0 +1,31 @@
+(ns average-speed.50iq.client
+  (:require [org.httpkit.client :as http]
+            [average-speed.db.camera :as camera]
+            [clojure.tools.logging :as log]))
+
+(defn- handle-image-response [{:keys [status headers body error]}]
+  (if error
+    (log/warn (str "Failed image request: " error))
+    (log/info body)))
+
+(defn- api-url [camera]
+  (str "http://" (:id camera) "/saf"))
+
+(defn- request-options [safid]
+  {:timeout      2000
+   :query-params {:func     "Retrieve"
+                  :SAFID    safid
+                  :Template "2"}
+   :user-agent   "Average-Speed-Server"})
+
+(defn retrieve-images-for-violation [speed-record]
+  (let [initial-camera  (camera/get-with-serial-no (:start_camera_serial_no speed-record))
+        end-camera      (camera/getwith-serial-no (:end_camera_serial_no speed-record))]
+    (http/get
+     (api-url initial-camera)
+     (request-options (:start_safid speed-record))
+     handle-image-response)
+    (http/get
+     (api-url end-camera)
+     (request-options (:end_safid speed-record))
+     handle-image-response)))

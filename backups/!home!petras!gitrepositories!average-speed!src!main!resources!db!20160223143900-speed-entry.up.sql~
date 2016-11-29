@@ -1,0 +1,12 @@
+create table if not exists speed_record (
+       id serial primary key,
+       speed decimal(4, 2) not null,
+       distance decimal(19, 2) not null,
+       speed_limit decimal (4, 2) not null,
+       address varchar(255),
+       plate_number varchar(15),
+       route_id integer,
+       route_name varchar(255),
+       start_plate_id references plate_record(id) not null,
+       end_plate_id bigint references plate_record(id) not null
+);

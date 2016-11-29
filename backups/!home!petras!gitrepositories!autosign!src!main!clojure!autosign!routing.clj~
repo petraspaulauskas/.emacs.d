@@ -1,0 +1,6 @@
+(ns autosign.routing
+  (:require [compojure.core :refer [GET POST context defroutes])))
+
+(defroutes api
+  (GET "/" request
+       "OK"))

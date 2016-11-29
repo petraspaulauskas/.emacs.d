@@ -1,0 +1,2 @@
+(ns average-speed.db.speed
+  (:require [korma.core :as korma]))

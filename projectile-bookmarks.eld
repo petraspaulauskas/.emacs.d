@@ -1,0 +1,1 @@
+("~/gitrepositories/autosign/" "~/gitrepositories/dailycard/" "~/gitrepositories/average-speed/" "~/gitrepositories/backoffice/" "~/gitrepositories/frontoffice/" "~/gitrepositories/pdf-signer/" "~/gitrepositories/sign-widget/" "~/.emacs.d/elpa/hydra-0.13.4/")

@@ -1,0 +1,10 @@
+(ns average-speed.jobs.plate-discard
+  (:require [clojurewerkz.quartzite.triggers :as t]
+            [clojurewerkz.quartzite.jobs :as j]
+            [clojurewerkz.quartzite.schedule.simple :as ss]
+            [average-speed.db.plate-record :as pr]
+            [clojure.tools.logging :as log]))
+
+
+(defn discard [time]
+  )

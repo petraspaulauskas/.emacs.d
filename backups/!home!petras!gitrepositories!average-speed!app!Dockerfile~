@@ -1,0 +1,5 @@
+FROM java:8-jre
+ADD target/average-speed-app-0.1.0-SNAPSHOT.jar /srv/average-speed-app.jar
+EXPOSE 8080
+EXPOSE 8081
+CMD ["java", "-jar", "srv/average-speed-app.jar"]

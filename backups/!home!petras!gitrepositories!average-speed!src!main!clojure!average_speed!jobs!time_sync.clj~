@@ -1,0 +1,46 @@
+(ns average-speed.jobs.time-sync
+  (:require [clojurewerkz.quartzite.scheduler :as qs]
+            [clojurewerkz.quartzite.triggers :as t]
+            [clojurewerkz.quartzite.jobs :as j]
+            [clojurewerkz.quartzite.schedule.simple :as ss]
+            [average-speed.50iq.client :as client]
+            [average-speed.db.camera :as cameras]
+            [clj-time.core :as tc]
+            [clojure.tools.logging :as log]))
+
+(j/defjob TimeSync
+  [ctx]
+  (log/info "Sync time job")
+  (let [cams (cameras/list-in-routes)]
+    (dorun (map (fn [camera]
+                  (client/set-camera-timestamp
+                   (:ip camera)
+                   (:admin_username camera)
+                   (:admin_password camera)
+                   (tc/now))) cams))))
+
+(defn- time-sync-job []
+  (j/build
+   (j/of-type TimeSync)
+   (j/with-identity (j/key "jobs.timesync"))))
+
+(defn- time-sync-trigger [interval-in-millis]
+  (t/build
+   (t/with-identity (t/key "triggers.timesync"))
+   (t/start-now)
+   (t/with-schedule (ss/schedule
+                     (ss/repeat-forever)
+                     (ss/with-interval-in-milliseconds interval-in-millis)))))
+
+(defn create-jobs-scheduler [cfg]
+  (let [state (atom nil)]
+    {:start-fn #(swap!
+                 state
+                 (constantly
+                  (let [scheduler (qs/start (qs/initialize))]
+                    (qs/schedule
+                     scheduler
+                     (time-sync-job)
+                     (time-sync-trigger (:sync-interval cfg)))
+                    scheduler)))
+     :stop-fn #(swap! state (constantly (qs/shutdown @state)))}))

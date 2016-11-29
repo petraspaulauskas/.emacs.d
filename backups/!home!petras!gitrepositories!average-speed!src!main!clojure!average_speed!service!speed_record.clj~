@@ -1,0 +1,17 @@
+(ns average-speed.service.speed-record
+  (:require [average-speed.db.speed-record :as sr]
+            [clj-time.core :as t]))
+
+(defn create-from-plates [route initial-record end-record]
+  (sr/store {:plate_number    (:plate_number initial-record)
+             :speed           (with-precision 2
+                                (/ (/ (:distance route) 1000)
+                                   (/ (t/in-millis (t/interval (:decode_time initial-record) (:decode_time end-record)))
+                                      3600000)))
+             :distance        (:distance route)
+             :speed_limit     (:speed_limit route)
+             :address         (:address route)
+             :route_id        (:id route)
+             :start_plate_id  (:id initial-record)
+             :end_plate_id    (:id end-record)
+             :speed_threshold (:speed_threshold route)}))

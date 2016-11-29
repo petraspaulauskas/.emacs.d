@@ -1,0 +1,39 @@
+(ns average-speed.jobs.time-poll
+  (:require [clojurewerkz.quartzite.triggers :as t]
+            [clojurewerkz.quartzite.jobs :as j]
+            [clojurewerkz.quartzite.schedule.simple :as ss]
+            [clj-time.core :as time]
+            [clojure.tools.logging :as log]
+            [average-speed.50iq.client :as client]
+            [average-speed.db.camera :as camera]))
+
+(defn poll-time [camera-id ip username password]
+  (let [time-before (time/now)]
+    (log/info (str "Time before request: " time-before))
+    (log/info (str "Reported time: " @(client/get-camera-time ip username password)))
+    (log/info (str "Time after request: " (time/now)))))
+
+
+(defn read-camera-times []
+  (dorun (map
+          #(poll-time (:id %) (:ip %) (:admin_username %) (:admin_password %))
+          (camera/list-in-routes))))
+
+(j/defjob PollTime
+  [ctx]
+  (log/info "Poll camera times")
+  (read-camera-times)
+  (log/info "Finished polling camera times"))
+
+(defn time-poll-job []
+  (j/build
+   (j/of-type PollTime)
+   (j/with-identity (j/key "jobs.time-poll"))))
+
+(defn time-poll-trigger []
+  (t/build
+   (t/with-identity (t/key "triggers.time-poll"))
+   (t/start-now)
+   (t/with-schedule (ss/schedule
+                     (ss/repeat-forever)
+                     (ss/with-interval-in-milliseconds 1000)))))

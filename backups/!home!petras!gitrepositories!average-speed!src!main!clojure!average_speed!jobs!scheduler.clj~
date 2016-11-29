@@ -1,0 +1,20 @@
+(ns average-speed.jobs.scheduler
+  (:require [clojurewerkz.quartzite.scheduler :as qs]
+            [average-speed.jobs.time-sync :as ts]))
+
+(def jobs [{:job ts/time-sync-job
+            :trigger @(ts/time-sync-trigger (:sync-interval %))}])
+
+(defn create-jobs-scheduler [cfg]
+  (let [state (atom nil)]
+    {:start-fn #(swap!
+                 state
+                 (constantly
+                  (let [scheduler (qs/start (qs/initialize))]
+                    (dorun (map (fn [job]
+                                  (qs/schedule
+                                   scheduler
+                                   ((:job job))
+                                   ((:trigger job) cfg))) jobs))
+                    scheduler)))
+     :stop-fn  #(swap! state (constantly (qs/shutdown @state)))}))

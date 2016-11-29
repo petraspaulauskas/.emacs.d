@@ -1,0 +1,11 @@
+#!/bin/bash
+sudo docker run -d \
+-p 8080:8080 \
+-v /dev/bus/usb:/dev/bus/usb \
+-e KEYING_DATA_PROVIDER='card' \
+-e CARD_NATIVE_LIB='/usr/lib/ccs/libccpkip11.so' \
+-e CARD_NAME='libccpkip11' \
+-e PIN='16857473' \
+--log-driver=json-file --log-opt max-size=10m --log-opt max-file=10 \
+--net='host' \
+lt.inventi/autosign

@@ -1,0 +1,11 @@
+(ns autosign.xades.document-test
+  (:require [clojure.test :refer :all]
+            [autosign.xades.document :as doc])
+  (:import (org.xml.sax InputSource)
+           (java.io FileReader)))
+
+(deftest signature-test
+  (testing "Signs document"
+    (doc/sign (doc/create-document (InputSource. (FileReader. "test.xml")))
+              (doc/create-signer "jks" "autosign.jks" "autosign" "autosign")
+              (doc/create-signed-object "Document"))))

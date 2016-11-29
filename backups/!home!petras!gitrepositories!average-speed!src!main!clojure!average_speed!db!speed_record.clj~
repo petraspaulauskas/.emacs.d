@@ -1,0 +1,41 @@
+(ns average-speed.db.speed
+  (:require [korma.core :as korma]
+            [average-speed.db.plate-record :as pr]))
+
+(korma/defentity start-plate-record
+  (korma/table :plate_record)
+  (korma/entity-fields
+   :decode_time
+   :latitude
+   :longitude
+   :motion
+   :safid
+   :camera_serial_no
+   :metrological_check_no))
+
+(korma/defentity end-plate-record
+  (korma/table :plate_record)
+  (korma/entity-fields
+   :decode_time
+   :latitude
+   :longitude
+   :motion
+   :safid
+   :camera_serial_no
+   :metrological_check_no))
+
+(korma/defentity speed-record
+  (korma/table :speed_record)
+  (korma/entity-fields
+   :speed
+   :distance
+   :speed_limit
+   :address
+   :plate_number
+   :route_id
+   :route_name)
+  (korma/belongs-to start-plate-record {:fk :start_plate_id})
+  (korma/belongs-to end-plate-record {:fk :end_plate_id}))
+
+(defn store [record]
+  (korma/insert speed-record (korma/values record)))

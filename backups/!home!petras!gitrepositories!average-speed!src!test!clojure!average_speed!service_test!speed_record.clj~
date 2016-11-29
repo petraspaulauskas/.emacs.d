@@ -1,0 +1,51 @@
+(ns average-speed.service-test.speed-record
+  (:require [clojure.test :refer :all]
+            [average-speed.controller.speed-record :as sr]
+            [average-speed.db.speed-record :as sd]
+            [clj-time.core :as t]))
+
+(deftest speed-record-controller-test
+  (let [stored-record (atom nil)]
+    (with-redefs [sd/store (fn [data] (swap! stored-record (constantly data)))]
+      (testing "Creates speed record"
+        (sr/create-from-plates {:id              10
+                                :start_lat       0M
+                                :start_lon       0M
+                                :start_camera    1
+                                :finish_lat      0M
+                                :finish_lon      0M
+                                :finish_camera   2
+                                :distance        2000M
+                                :speed_limit     40M
+                                :speed_threshold 10M
+                                :address         "address"
+                                :is_enabled      true}
+                               {:id                    100
+                                :plate_number          "ASD123"
+                                :night_mode_active     false
+                                :decode_time           (t/date-time 2016 02 11 14 00 00 000)
+                                :latitude              0M
+                                :longitude             0M
+                                :camera_serial_no      "111"
+                                :metrological_check_no "1"
+                                :motion                "away"
+                                :safid                 "001"}
+                               {:id                    200
+                                :plate_number          "ASD123"
+                                :night_mode_active     false
+                                :decode_time           (t/date-time 2016 02 11 14 05 00 000)
+                                :latitude              0M
+                                :longitude             0M
+                                :camera_serial_no      "112"
+                                :metrological_check_no "2"
+                                :motion                "away"
+                                :safid                 "002"})
+        (is (= (:plate_number @stored-record) "ASD123"))
+        (is (= (:speed @stored-record) 24M))
+        (is (= (:distance @stored-record) 2000M))
+        (is (= (:speed_limit @stored-record) 40M))
+        (is (= (:speed_threshold @stored-record) 10M))
+        (is (= (:address @stored-record) "address"))
+        (is (= (:route_id @stored-record) 10))
+        (is (= (:start_plate_id @stored-record) 100))
+        (is (= (:end_plate_id @stored-record) 200))))))

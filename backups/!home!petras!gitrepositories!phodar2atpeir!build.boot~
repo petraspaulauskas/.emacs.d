@@ -1,0 +1,7 @@
+(set-env!
+  :resource-paths #{"src"}
+  :dependencies '[])
+
+(task-options!
+  pom {:project 'phodar2atpeir
+       :version "0.1.0"})

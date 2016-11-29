@@ -1,0 +1,7 @@
+(ns autosign.app
+  (:require [autosign.routing :as routing]
+            [compojure.handler :as h]))
+
+
+(defn handler []
+  (h/api routing/api))

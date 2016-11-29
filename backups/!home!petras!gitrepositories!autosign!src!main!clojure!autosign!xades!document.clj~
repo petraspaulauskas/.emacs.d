@@ -1,0 +1,35 @@
+(ns autosign.xades.document
+  (:import (xades4j.production DataObjectReference
+                               SignedDataObjects
+                               XadesBesSigningProfile)
+           (xades4j.providers.impl FileSystemKeyStoreKeyingDataProvider
+                                   KeyStoreKeyingDataProvider$SigningCertSelector
+                                   KeyStoreKeyingDataProvider$KeyStorePasswordProvider
+                                   KeyStoreKeyingDataProvider$KeyEntryPasswordProvider)
+           (javax.xml.parsers DocumentBuilderFactory)))
+
+(defn create-signed-object [reference]
+  (SignedDataObjects. (list (DataObjectReference. reference))))
+
+(defn get-keying-data-provider [type path store-pass key-pass]
+  (FileSystemKeyStoreKeyingDataProvider. type
+                                         path
+                                         (reify KeyStoreKeyingDataProvider$SigningCertSelector
+                                           (selectCertificate [this certs]
+                                             (first certs)))
+                                         (reify KeyStoreKeyingDataProvider$KeyStorePasswordProvider
+                                           (getPassword [this]
+                                             (.toCharArray store-pass)))
+                                         (reify KeyStoreKeyingDataProvider$KeyEntryPasswordProvider
+                                           (getPassword [this entry-alias entry-cert]
+                                             (.toCharArray key-pass)))
+                                         true))
+
+(defn create-signer [keying-data-provider]
+  (.newSigner (XadesBesSigningProfile. keying-data-provider)))
+
+(defn create-document [doc]
+  (.parse (.newDocumentBuilder (DocumentBuilderFactory/newInstance)) doc))
+
+(defn sign [doc signer data-objects]
+  (.sign signer data-objects (.getDocumentElement doc)))

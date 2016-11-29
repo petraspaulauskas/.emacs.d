@@ -1,0 +1,26 @@
+(set-env!
+ :source-paths #{"src/main/clojure"}
+ :resource-paths #{"src/main/resources"}
+ :dependencies '[[org.clojure/clojure "1.8.0"]
+                 [ring/ring-core "1.4.0"]
+                 [compojure "1.5.0"]
+                 [org.clojure/tools.logging "0.3.1"]
+                 [ch.qos.logback/logback-classic "1.1.7"]
+                 
+                 [pandeiro/boot-http "0.7.3" :scope "test"]])
+
+(require '[pandeiro.boot-http :refer [serve]])
+
+(task-options!
+ pom {:project 'autosign
+      :version "0.1.0-SNAPSHOT"}
+ aot {:all true}
+ web {:serve 'autosign.app/handler}
+ target {:dir #{"target"}})
+
+(deftask uberwar []
+  (System/setProperty "BOOT_EMIT_TARGET" "no")
+  (comp (aot) (pom) (web) (uber) (war) (target)))
+
+(deftask dev []
+  (serve :handler 'autosign.app/handler))

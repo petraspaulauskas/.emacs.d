@@ -1,0 +1,4 @@
+create table point_cameras (
+       id serial primary key,
+       camera_id int references camera(id) not null
+);

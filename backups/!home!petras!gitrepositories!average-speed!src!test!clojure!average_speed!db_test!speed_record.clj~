@@ -1,0 +1,9 @@
+(ns average-speed.db-test.speed-record
+  (:require [clojure.test :refer :all]
+            [average-speed.db-test.test-helpers :as th]
+            [average-speed.db.plate-record :as pr]))
+
+(use-fixtures :each th/setup-db-fixture)
+
+(deftest speed-record-test
+  )

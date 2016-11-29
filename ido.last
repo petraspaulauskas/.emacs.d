@@ -1,0 +1,277 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/home/petras/gitrepositories/average-speed/app/src/main/resources/web/public/" . "js/")
+ ("/home/petras/gitrepositories/average-speed/app/src/main/resources/web/" . "public/")
+ ("/home/petras/gitrepositories/average-speed/app/src/main/resources/" . "db/")
+ ("/home/petras/gitrepositories/autosign/src/main/clojure/autosign/" . "xades/")
+ ("/home/petras/gitrepositories/autosign/src/main/clojure/" . "autosign/")
+ ("/home/petras/gitrepositories/autosign/src/main/" . "clojure/")
+ ("/home/petras/gitrepositories/autosign/src/" . "main/")
+ ("/home/petras/gitrepositories/autosign/" . "src/")
+ ("/home/petras/gitrepositories/backoffice/src/main/clojure/signify/" . "security/")
+ ("/home/petras/gitrepositories/backoffice/src/mock/resources/db/" . "common/")
+ ("/home/petras/gitrepositories/backoffice/src/mock/resources/" . "db/")
+ ("/home/petras/gitrepositories/backoffice/src/mock/" . "resources/")
+ ("/home/petras/gitrepositories/backoffice/src/" . "mock/")
+ ("/home/petras/gitrepositories/backoffice/cloud/main/clojure/signify/app/" . "cloud/")
+ ("/home/petras/gitrepositories/backoffice/cloud/main/clojure/signify/" . "app/")
+ ("/home/petras/gitrepositories/backoffice/cloud/main/clojure/" . "signify/")
+ ("/home/petras/gitrepositories/backoffice/cloud/main/" . "clojure/")
+ ("/home/petras/gitrepositories/backoffice/cloud/" . "main/")
+ ("/home/petras/gitrepositories/backoffice/" . "cloud/")
+ ("/home/petras/gitrepositories/average-speed/app/src/main/clojure/average_speed/" . "api/")
+ ("/home/petras/gitrepositories/average-speed/app/src/main/clojure/" . "average_speed/")
+ ("/home/petras/gitrepositories/average-speed/app/src/main/" . "clojure/")
+ ("/home/petras/gitrepositories/average-speed/app/src/app/clojure/" . "average_speed/")
+ ("/home/petras/gitrepositories/average-speed/app/src/app/" . "clojure/")
+ ("/home/petras/gitrepositories/average-speed/app/src/" . "main/")
+ ("/home/petras/gitrepositories/average-speed/app/" . "src/")
+ ("/home/petras/gitrepositories/dailycard/" . "dailycard-integration/")
+ ("/home/petras/gitrepositories/average-speed/src/test/resources/" . "mock_db/")
+ ("/home/petras/gitrepositories/average-speed/src/test/clojure/average_speed/" . "db_test/")
+ ("/home/petras/gitrepositories/average-speed/src/test/clojure/" . "average_speed/")
+ ("/home/petras/gitrepositories/average-speed/src/test/" . "clojure/")
+ ("/home/petras/gitrepositories/average-speed/src/main/clojure/average_speed/" . "security/")
+ ("/home/petras/gitrepositories/average-speed/src/main/clojure/" . "average_speed/")
+ ("/home/petras/gitrepositories/average-speed/src/main/resources/" . "db/")
+ ("/home/petras/gitrepositories/average-speed/src/main/" . "clojure/")
+ ("/home/petras/gitrepositories/average-speed/src/" . "main/")
+ ("/home/petras/gitrepositories/average-speed/" . "app/")
+ ("/home/petras/gitrepositories/" . "average-speed/")
+ ("/home/petras/" . "gitrepositories/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/home/petras/gitrepositories/average-speed/app/"
+ "/home/petras/gitrepositories/dailycard/"
+ "/home/petras/gitrepositories/average-speed/app/src/main/clojure/average_speed/api/"
+ "/home/petras/gitrepositories/average-speed/atpeir/"
+ "/home/petras/gitrepositories/autosign/"
+ "/home/petras/gitrepositories/average-speed/app/src/main/resources/db/"
+ "/home/petras/gitrepositories/average-speed/app/src/main/resources/web/public/js/"
+ "/home/petras/gitrepositories/average-speed/app/src/main/clojure/average_speed/app/"
+ "/home/petras/gitrepositories/average-speed/app/src/main/clojure/average_speed/"
+ "/home/petras/gitrepositories/autosign/docker/"
+ "/home/petras/gitrepositories/autosign/src/main/resources/"
+ "/home/petras/gitrepositories/autosign/src/main/clojure/autosign/xades/"
+ "/home/petras/gitrepositories/autosign/src/main/clojure/autosign/"
+ "/home/petras/gitrepositories/autosign/src/test/clojure/autosign/"
+ "/home/petras/gitrepositories/frontoffice/"
+ "/home/petras/gitrepositories/pdf-signer/"
+ "/home/petras/gitrepositories/backoffice/"
+ "/home/petras/gitrepositories/backoffice/src/mock/resources/ldap/"
+ "/home/petras/gitrepositories/backoffice/src/main/clojure/signify/security/"
+ "/home/petras/gitrepositories/backoffice/cloud/main/clojure/signify/app/cloud/"
+ "/home/petras/gitrepositories/backoffice/src/mock/resources/db/common/"
+ "/home/petras/gitrepositories/average-speed/app/src/app/clojure/average_speed/"
+ "/home/petras/gitrepositories/average-speed/src/main/clojure/average_speed/security/"
+ "/home/petras/gitrepositories/average-speed/src/main/resources/db/"
+ "/home/petras/gitrepositories/average-speed/src/generator/clojure/average_speed/"
+ "/home/petras/gitrepositories/average-speed/src/test/clojure/average_speed/drm_test/"
+ "/home/petras/gitrepositories/average-speed/src/main/clojure/average_speed/drm/"
+ "/home/petras/gitrepositories/average-speed/src/test/clojure/average_speed/jobs_test/"
+ "/home/petras/gitrepositories/average-speed/src/main/clojure/average_speed/jobs/"
+ "/home/petras/gitrepositories/average-speed/src/main/clojure/average_speed/50iq/"
+ "/home/petras/gitrepositories/dailycard/dailycard-integration/"
+ "/home/petras/gitrepositories/average-speed/src/test/clojure/average_speed/db_test/"
+ "/home/petras/gitrepositories/average-speed/src/main/clojure/average_speed/db/"
+ "/home/petras/gitrepositories/average-speed/src/test/clojure/average_speed/service_test/"
+ "/home/petras/gitrepositories/average-speed/src/main/clojure/average_speed/service/"
+ "/home/petras/.emacs.d/"
+ "/home/petras/gitrepositories/average-speed/src/main/clojure/average_speed/api/"
+ "/home/petras/gitrepositories/average-speed/src/test/clojure/average_speed/controller_test/"
+ "/home/petras/gitrepositories/average-speed/src/main/clojure/average_speed/controller/"
+ "/home/petras/gitrepositories/average-speed/"
+ "/home/petras/gitrepositories/average-speed/src/test/resources/mock_db/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "project.clj"
+ "README.md"
+ "plate.clj"
+ "build.boot"
+ "20160622102000-point-cameras.up.sql"
+ "20160622102000-point-cameras.down.sql"
+ "expanding-list.js"
+ "routing.clj"
+ "app.clj"
+ "start.sh"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/home/petras/gitrepositories/average-speed/app/" (22510 17534 448075 23000) "src/" "config/" "./" "docs/" ".lein-failures" "README.md" "../" "run.sh" "target/" "translations/" "project.clj")
+
+ ("/home/petras/" (22510 17736 537770 477000) "Public/" ".lesshst" ".gnome2/" ".Skype/" ".gksu.lock" "average-speed-run" "dumps/" "vpn_pd.pcf" ".pgadmin3" ".lein/" "clavis-test-images.zip" ".jssc/" "Naudotojo instrukcija.docx" ".icedove/" ".directory" "jzmq.lib" "Aktyvavimo kodo generavimo instrukcija.docx" "req" ".karaf/" "inproc_lat.exe" "iso20022connect-2.0.1.tar.gz" ".boot/" "Architekturos aprasymas.docx" ".gnome/" "VirtualBox VMs/" "SoapUI-5.0.0/" ".bash_history" "jzmq.dll" "jzmq/" "messages/" "apache-jmeter-3.0/" "manual-radar-page.png" ".wget-hsts" ".pgadmin_histoqueries" "iso20022connect-2.0.2-SNAPSHOT.tar.gz" "tsung-filex-config.xml" "average-speed-instrukcijos1.0.zip" "Diegimo instrukcija.docx" "priceProposals-reverse-engineering" "PriceProposalsMapping.ods" "vms/" "SelentePO_4581430011_kibana.xml" ".gnupg/" "iso20022connect.tar" "signed.xml" ".swo" "statoil-jira-password" "file_input/" ".macromedia/" ".ICAClient/" "post-xml" "radar-settings.png" "idea-IC-162.1121.32/" "avg-speed/" "zmq.jar" "apache-activemq-5.13.3/" "Diegimo instrukcija ATPR.docx" "test.bdoc" "petras/" "tsung-conf.xml" "iso-connect-run" "clavis-resources.7z" "README.txt" ".hplip/" ".remmina/" "clavis-1.10.zip" ".pgpass" ".java/" "ca-maxima.key" "radar_configuration_page.png" "autostart/" "filex-test-data.csv" "nightcode-1.0.1-standalone.jar" "clavis-MOCKED-1.9-SNAPSHOT.zip" "digest-test" ".kde/" ".emacs.d/" ".config/" "dailycard-soapui-project.xml" ".npm/" "clavis-1.9.zip" "sqldeveloper-4.1.2.20.64-no-jre.zip" ".v8flags.4.5.103.35.petras.json" "average-speed-generator-0.1.0-SNAPSHOT.jar" "Diegimo instrukcija-1.0.docx" "dc" ".profile" "clavis-soapui-project.xml" "average-speed-ftp-settings" "ISO20022_DNB-certs/" ".req.swp" "int-filex-broker/" ".Xauthority" "DailyCardkey" ".ApacheDirectoryStudio/" ".IdeaIC2016.2/" ".mozilla/" "sqldeveloper/" "clavis-1.9/" "clavis-MOCKED-1.6/" "java_error_in_IDEA_6045.log" "KTKS_naudotojo_vadovas.html.LyXconv/" "kse-52/" "DailyCard-TaskList-2015-07-29.docx" "Documents/" "derby.log" "average-speed.tar" "linux-x86_64-1.8.tar.gz" "Naudotojo instrukcija-1.0.docx" "card-pin" "apache-servicemix-5.0.3.zip" ".IdeaIC2016.1/" ".sane/" ".local/" ".hermes/" "inproc_thr.exe" "dc appsas prekybininkui html.rar" ".fonts.conf" "root@soft.solidsupply.lt" "lighttable-0.8.1-linux/" "clavis-1.2.zip" ".IdeaIC14/" "pkcsspy" ".gradle/" "needed-sources-pricing-servie" "Diegimo instrukcija-.docx" ".lyx/" "nuolaidos_taikymas.png" "test.pem" "Diegimo instrukcija-atpeir-1.0.docx" "clavis-MOCKED-1.6.zip" "pgadmin.log" ".bashrc" "zeromq-3.2.2+jzmq-2.1.3(msvc10-win32).7z" "remote_thr.exe" "DNBCerts/" "libzmq.dll" "local_thr.exe" ".ICEauthority" ".safesign/" "HermesJMS/" "clavis/" ".gconf/" "ApacheDirectoryStudio/" "remote_lat.exe" "PriceProposalsResponseMapping.ods" "httpd.zip" ".cache/" ".adobe/" "SoapUI-5.2.0/" ".lobo/" "petras.tar.gz" ".gitconfig" "clavis-1.2/" "ISO20022_DNB.jks" ".bash_logout" "dc appsas prekybininkui html/" "file_input_test/" "dc-data.png" "libkf5plasma5_5.23.0-1_amd64.deb" ".node-gyp/" ".thumbnails/" "ca-maxima.crt" "iso20022connect-2.0.2-SNAPSHOT/" "Music/" ".m2/" "symphony-questions" "soapui-settings.xml" ".ssh/" ".xsession-errors" "apache-servicemix-5.3.2/" "JMSToolBox/" "samba/" "speed_alert_page.png" "test.p12" "Pictures/" "plates.doc" ".ideaLibSources/" "bgw-karaf-1.5.kar" "hermes.log" ".dbus/" ".texmf-var/" "ISO20022_DNB-certs.zip" "flyway-3.2.1/" "hsqlprefs.dat" "Videos/" ".gnome2_private/" "customer.cer" ".v8flags.3.28.71.19.petras.json" ".gimp-2.8/" ".viminfo" "default-soapui-workspace.xml" "temp/" "oracle-java6-jdk_6u45_amd64.deb" ".tsung/" "local_lat.exe" ".jtb/" "Desktop/" "apache-servicemix-5.0.3/" "iso20022connect-2.0.2-SNAPSHOT-war/" ".sqlworkbench/" ".rnd" ".sqldeveloper/" "apache-servicemix-5.3.2.zip" "gitrepositories/" "radar-page.png" ".IdeaIC15/" ".pki/" "Templates/" "clavis-MOCKED-1.9-SNAPSHOT/" ".soapuios/" ".vmware/" "Downloads/" "../" "./")
+
+ ("/home/petras/gitrepositories/" (22506 29364 707894 204000) "signify-applet/" "iso20022connect/" "gf-clientzone/" "bgw/" "jzmq/" "Clavis_description_en.pdf" "signify-sign-widget/" "average-speed/" "solid/" "pdf-signer/" "int-filex-f2q/" "frontoffice/" "./" "int-filex-q2f/" "integration-core/" "KTKS_administratoriaus_vadovas.pdf" "xades4j/" "int-filex-broker/" "docker_toxy/" "dailycard/" "digidoc4j/" "int-customers-domain/" "KTKS_architektura.pdf" "sign-widget/" "clavis/" "KTKS_naudotojo_vadovas.pdf" "../" "backoffice/" "autosign/" "unigate/" "int-amphora-purchase-orders/" "int-filex-broker.b/" "int-project-template/")
+
+ ("/home/petras/gitrepositories/average-speed/app/src/main/clojure/average_speed/api/" (22433 42716 243884 642000) "./" "context.clj" "../" "plate.clj")
+
+ ("/home/petras/gitrepositories/average-speed/app/src/main/clojure/average_speed/" (22433 36646 773003 412000) "security/" "drm/" "50iq/" "db/" "app/" "./" "service/" "core/" "web/" "app.clj" "../" "api/" "jobs/" "controller/")
+
+ ("/home/petras/gitrepositories/average-speed/atpeir/" (22303 26859 48752 335000) "src/" "config/" "./" "ATPEIR-soapui-project.xml" "docs/" "README.md" "../" "run.sh" "project.clj")
+
+ ("/home/petras/gitrepositories/autosign/" (22395 42038 243259 666000) ".directory" "src/" "readme.md" "./" ".gitignore" ".git/" "build.boot" "../" "run.sh" "target/" "docker/")
+
+ ("/home/petras/gitrepositories/average-speed/app/src/main/resources/db/" (22378 18132 40752 632000) "20160318160500-camera-time-snapshot.up.sql" "20160511095433-route-serial-no.down.sql" "20160224144510-user-account.up.sql" "20160419170500-project-version.up.sql" "20160510153407-gps-data.up.sql" "20160331170000-camera-activation.down.sql" "20160622102000.up.sql" "20160418121759-timestamp-fix.up.sql" "./" "20160419170500-project-version.down.sql" "20160512120725-integers.down.sql" "20160219134000-plate-record.down.sql" "20160418155400-change-certificate.up.sql" "20160218141350-route.up.sql" "20160219134000-plate-record.up.sql" "20160418155400-change-certificate.down.sql" "20160510153407-gps-data.down.sql" "20160223143900-speed-entry.down.sql" "20160418121759-timestamp-fix.down.sql" "20160407150000-plate-record-index.down.sql" "20160218141350-route.down.sql" "20160511095433-route-serial-no.up.sql" "20160512120725-integers.up.sql" "20160224092550-role.up.sql" "20160211114000-camera.up.sql" "20160331170000-camera-activation.up.sql" "20160510151205-route-name-certificate.down.sql" "20160622102000-point-cameras.down.sql" "20160223143900-speed-entry.up.sql" "../" "20160426164019-camera-name.down.sql" "20160510151205-route-name-cerfiticate.up.sql" "20160426164019-camera-name.up.sql" "20160224092550-role.down.sql" "20160318160500-camera-time-snapshot.down.sql" "20160407150000-plate-record-index.up.sql" "20160211114000-camera.down.sql" "20160224144510-user-account.down.sql")
+
+ ("/home/petras/gitrepositories/average-speed/app/src/main/resources/web/" (22376 64052 495815 923000) "404.html" "home.html" "routes-form.html" "profile.html" "./" "roles-form.html" "violations.html" "public/" "users-edit.html" "login.html" "violations-view.html" "errors.html" "roles.html" "users-add.html" "../" "header.html" "footer.html" "users.html" "routes.html" "cameras-form.html" "cameras.html" "profile-password.html")
+
+ ("/home/petras/gitrepositories/average-speed/" (22376 62489 543233 302000) ".lein-repl-history" ".hgignore" "app/" "./" "atpeir/" ".gitignore" ".git/" ".lein-failures" "pom.xml" "test/" "../" "target/")
+
+ ("/home/petras/gitrepositories/average-speed/app/src/main/resources/web/public/js/" (22276 49350 587063 130000) "./" "bootbox.min.js" "bootstrap3-typeahead.min.js" "../" "jquery-1.12.0.min.js" "bootstrap.min.js")
+
+ ("/home/petras/gitrepositories/average-speed/app/src/main/resources/web/public/" (22276 49350 587063 130000) "js/" "./" "style/" "../" "images/" "fonts/")
+
+ ("/home/petras/gitrepositories/average-speed/app/src/main/resources/" (22294 15632 342370 677000) "db/" "./" "i18n/" "logback.xml" "web/" "../" "quartz.properties")
+
+ ("/home/petras/gitrepositories/average-speed/app/src/main/clojure/average_speed/app/" (22303 26859 44752 343000) "routing.clj" "version.clj" "./" "i18n.clj" "../" "utils.clj")
+
+ ("/home/petras/gitrepositories/autosign/docker/" (22350 61257 48843 456000) "tomcat-users.xml" "./" "ccs_1.50-00560.amd64.deb" "Dockerfile" "../" "pcscd")
+
+ ("/home/petras/gitrepositories/autosign/src/main/clojure/autosign/xades/" (22343 4411 220875 487000) "document.clj" "./" "signer.clj" "../" "keying.clj")
+
+ ("/home/petras/gitrepositories/autosign/src/main/clojure/autosign/" (22334 52533 520286 70000) "config.clj" "routing.clj" "xades/" "./" "lba.clj" "app.clj" "../")
+
+ ("/home/petras/gitrepositories/autosign/src/main/" (22333 41803 154637 763000) "./" "../" "clojure/")
+
+ ("/home/petras/gitrepositories/autosign/src/test/clojure/autosign/" (22331 949 20644 213000) "xades/" "./" "../")
+
+ ("/home/petras/gitrepositories/autosign/src/test/clojure/autosign/xades/" (22331 2239 880469 827000) "./" "../" "document_test.clj")
+
+ ("/home/petras/gitrepositories/autosign/src/test/" (22329 41145 707433 843000) "./" "resources/" "../" "clojure/")
+
+ ("/home/petras/gitrepositories/autosign/src/test/clojure/" (22329 41145 707433 843000) "./" "../" "autosign/")
+
+ ("/home/petras/gitrepositories/autosign/src/" (22329 39691 337666 993000) "./" "main/" "test/" "../")
+
+ ("/home/petras/gitrepositories/autosign/src/main/clojure/" (22320 28032 701914 450000) "./" "../" "autosign/")
+
+ ("/home/petras/gitrepositories/frontoffice/" (22316 20839 144169 6000) "src/" "./" ".git/" "../" "config.rb" "project.clj")
+
+ ("/home/petras/gitrepositories/pdf-signer/src/" (22316 20148 531723 684000) "./" "mock/" "main/" "test/" "../")
+
+ ("/home/petras/gitrepositories/pdf-signer/src/main/" (22316 20148 527723 685000) "java/" "./" "webapp/" "resources/" "../" "clojure/")
+
+ ("/home/petras/gitrepositories/pdf-signer/src/main/clojure/" (22316 20148 519723 687000) "./" "../" "signify/")
+
+ ("/home/petras/gitrepositories/pdf-signer/src/main/clojure/signify/" (22316 20148 523723 687000) "security/" "misc.clj" "config.clj" "db/" "app/" "./" "job_runner.clj" "sign/" "scheduler.clj" "lifecycle.clj" "core/" "document/" "audit/" "web/" "audit.clj" "../" "dictionary.clj")
+
+ ("/home/petras/gitrepositories/pdf-signer/src/main/clojure/signify/sign/" (22316 20148 519723 687000) "./" "api.clj" "../" "api/")
+
+ ("/home/petras/gitrepositories/pdf-signer/" (22316 20148 519723 687000) "src/" "./" ".gitignore" ".git/" "README.md" "../" "project.clj" "docker/")
+
+ ("/home/petras/gitrepositories/backoffice/" (22314 2615 352597 386000) "src/" "danske/" "./" "less/" ".git/" "cloud/" "../" "target/" "project.clj")
+
+ ("/home/petras/gitrepositories/backoffice/src/mock/clojure/" (22312 44097 425017 547000) "app_dev.clj" "config.clj" "dev_data.clj" "./" "user.clj" "migrations.clj" "../")
+
+ ("/home/petras/gitrepositories/backoffice/src/main/clojure/signify/security/" (22307 6398 556994 750000) "auth.clj" "wwwauth.clj" "shiro.clj" "spnego.clj" "realm.clj" "./" "shiro_spnego_auth.clj" "roles.clj" "tsp.clj" "../" "x509.clj")
+
+ ("/home/petras/gitrepositories/backoffice/src/main/clojure/signify/app/" (22307 8358 958909 828000) "./" "config_common.clj" "handlers.clj" "../" "backoffice/" "services.clj")
+
+ ("/home/petras/gitrepositories/backoffice/src/main/clojure/signify/app/backoffice/" (22297 65290 740243 52000) "routing.clj" "./" "api.clj" "app.clj" "context_listener.clj" "api_servlet.clj" "../" "services.clj")
+
+ ("/home/petras/gitrepositories/backoffice/src/mock/resources/db/common/" (22295 18040 393546 531000) "V2_0_1__cloud_signing.sql" "V2.0.2__cloud_backoffice.sql" "./" "V1.1.2__classif_data.sql" "V1.0.2__tables_backoffice.sql" "V1_0_1__tables_signing.sql" "../")
+
+ ("/home/petras/gitrepositories/backoffice/src/mock/resources/db/" (22295 18040 393546 531000) "./" "common/" "../")
+
+ ("/home/petras/gitrepositories/backoffice/src/mock/resources/" (22295 18040 393546 531000) "documents/" "db/" "ignored-ocsp.crt" "dev-keys/" "./" "public/" "spnego/" "../" "logging.properties" "mock-certs")
+
+ ("/home/petras/gitrepositories/backoffice/src/mock/" (22295 18040 393546 531000) "./" "resources/" "../" "clojure/")
+
+ ("/home/petras/gitrepositories/backoffice/src/" (22295 18040 393546 531000) "./" "mock/" "main/" "test/" "../")
+
+ ("/home/petras/gitrepositories/backoffice/src/main/" (22295 18040 369546 565000) "java/" "./" "resources/" "../" "clojure/")
+
+ ("/home/petras/gitrepositories/backoffice/src/main/clojure/" (22295 18040 369546 565000) "./" "../" "signify/")
+
+ ("/home/petras/gitrepositories/backoffice/src/main/clojure/signify/" (22295 18040 369546 565000) "security/" "misc.clj" "hooks.clj" "view/" "db/" "app/" "danske/" "components.clj" "./" "job_runner.clj" "scheduler.clj" "accounts.clj" "lifecycle.clj" "core/" "keywords/" "document/" "purger.clj" "mailer.clj" "audit/" "web/" "audit.clj" "../" "controller/" "dictionary.clj")
+
+ ("/home/petras/gitrepositories/backoffice/src/main/clojure/signify/db/" (22295 18040 369546 565000) "classifier_repo.clj" "sql.clj" "./" "jdbc.clj" "client_repo.clj" "../")
+
+ ("/home/petras/gitrepositories/backoffice/cloud/main/clojure/signify/app/cloud/" (22295 18040 349546 594000) "config.clj" "./" "../")
+
+ ("/home/petras/gitrepositories/backoffice/cloud/main/clojure/signify/app/" (22295 18040 349546 594000) "config.clj" "./" "cloud/" "../")
+
+ ("/home/petras/gitrepositories/backoffice/cloud/main/clojure/signify/" (22295 18040 349546 594000) "app/" "./" "../")
+
+ ("/home/petras/gitrepositories/backoffice/cloud/main/clojure/" (22295 18040 349546 594000) "./" "../" "signify/")
+
+ ("/home/petras/gitrepositories/backoffice/cloud/main/" (22295 18040 349546 594000) "./" "webapp/" "resources/" "../" "clojure/")
+
+ ("/home/petras/gitrepositories/backoffice/cloud/" (22295 18040 349546 594000) "./" "main/" "../")
+
+ ("/home/petras/gitrepositories/average-speed/app/src/app/clojure/average_speed/" (22295 11058 235331 645000) "main.clj" "./" "../")
+
+ ("/home/petras/gitrepositories/average-speed/app/src/main/clojure/" (22276 49350 563063 135000) "./" "average_speed/" "../")
+
+ ("/home/petras/gitrepositories/average-speed/app/src/main/" (22276 49350 575063 133000) "./" "resources/" "../" "clojure/")
+
+ ("/home/petras/gitrepositories/average-speed/app/src/app/" (22276 63960 563838 224000) "./" "dist/" "../" "clojure/")
+
+ ("/home/petras/gitrepositories/average-speed/app/src/app/clojure/" (22276 49350 563063 135000) "./" "average_speed/" "../")
+
+ ("/home/petras/gitrepositories/average-speed/app/src/" (22276 49350 591063 128000) "dev/" "app/" "./" "main/" "generator/" "test/" "../")
+
+ ("/home/petras/gitrepositories/average-speed/src/main/clojure/average_speed/security/" (22275 43761 177207 107000) "auth.clj" "digest.clj" "./" "../")
+
+ ("/home/petras/gitrepositories/average-speed/src/main/clojure/average_speed/" (22275 40991 492061 671000) "security/" "drm/" "50iq/" "db/" "app/" "./" "service/" "core/" "web/" "app.clj" "../" "api/" "jobs/" "controller/")
+
+ ("/home/petras/gitrepositories/average-speed/src/main/clojure/average_speed/50iq/" (22274 2851 95209 313000) "client.clj" "./" "../")
+
+ ("/home/petras/gitrepositories/average-speed/src/" (22270 14172 805204 419000) "dev/" "app/" "./" "main/" "generator/" "test/" "../")
+
+ ("/home/petras/gitrepositories/average-speed/src/main/resources/db/" (22269 11512 949116 712000) "20160318160500-camera-time-snapshot.up.sql" "20160224144510-user-account.up.sql" "20160331170000-camera-activation.down.sql" "./" "20160219134000-plate-record.down.sql" "20160218141350-route.up.sql" "20160219134000-plate-record.up.sql" "20160223143900-speed-entry.down.sql" "20160218141350-route.down.sql" "20160224092550-role.up.sql" "20160211114000-camera.up.sql" "20160331170000-camera-activation.up.sql" "20160223143900-speed-entry.up.sql" "../" "20160224092550-role.down.sql" "20160318160500-camera-time-snapshot.down.sql" "20160211114000-camera.down.sql" "20160224144510-user-account.down.sql")
+
+ ("/home/petras/gitrepositories/average-speed/src/main/clojure/average_speed/db/" (22269 10580 83943 552000) "camera.clj" "speed_record.clj" "./" "route.clj" "entities.clj" "role.clj" "user_account.clj" "plate_record.clj" "../" "camera_time_snapshot.clj" "datasource.clj")
+
+ ("/home/petras/gitrepositories/average-speed/src/test/clojure/average_speed/" (22269 393 49661 868000) "./" "db_test/" "service_test/" "jobs_test/" "../" "api_test/")
+
+ ("/home/petras/gitrepositories/average-speed/src/main/clojure/average_speed/api/" (22269 2427 727572 604000) "./" "../" "plate.clj")
+
+ ("/home/petras/gitrepositories/average-speed/src/main/clojure/average_speed/jobs/" (22268 62235 546787 657000) "time_poll.clj" "cleanup.clj" "./" "scheduler.clj" "route_validation.clj" "plate_discard.clj" "time_sync.clj" "camera_requests.clj" "../")
+
+ ("/home/petras/gitrepositories/average-speed/src/main/clojure/average_speed/service/" (22266 27956 670167 383000) "camera.clj" "settings.clj" "speed_record.clj" "./" "route.clj" "plate_record.clj" "../")
+
+ ("/home/petras/gitrepositories/dailycard/dailycard-integration/" (22220 24916 25563 27000) "src/" "dailycard-integration.iml" "./" "Dockerfile" ".lein-failures" "pom.xml" "../" "dailycard-integration.tar" "target/" "project.clj")
+
+ ("/home/petras/gitrepositories/dailycard/" (22220 24535 341720 648000) "dailycard.iml" "dailycard-db/" "dailycard-seller-app/" "./" ".gitignore" ".git/" "projectFilesBackup/" "README.md" "dailycard-generated-sources/" "../" ".idea/" "dailycard-client-app/" "target/" "dailycard-integration/" "dailycard-core/" "project.clj")
+
+ ("/home/petras/gitrepositories/average-speed/src/test/clojure/average_speed/db_test/" (22252 5307 509895 989000) "camera.clj" "speed_record.clj" "./" "route.clj" "role.clj" "test_helpers.clj" "user_account.clj" "plate_record.clj" "../" "camera_time_snapshot.clj")
+
+ ("/home/petras/gitrepositories/average-speed/src/main/resources/" (22248 9064 565739 422000) "db/" "./" "i18n/" "web/" "../" "quartz.properties")
+
+ ("/home/petras/gitrepositories/average-speed/src/test/clojure/average_speed/service_test/" (22250 43440 808356 405000) "camera.clj" "speed_record.clj" "./" "route.clj" "plate_record.clj" "../")
+
+ ("/home/petras/.emacs.d/" (22240 3788 73517 808000) "places" "ido.last" "init.el" "./" "backups/" "projectile-bookmarks.eld" "../" "auto-save-list/" "elpa/")
+
+ ("/home/petras/.emacs.d/elpa/" (22240 3540 921367 883000) "company-0.8.12/" "smartparens-1.6.3/" "paredit-24/" "gnupg/" "queue-0.1.1/" "clojure-mode-5.2.0/" "spinner-1.7/" "spinner-1.7.signed" "queue-0.1.1.signed" "multiple-cursors-1.3.0/" "hydra-0.13.4/" "clj-refactor-2.0.0/" "./" "pkg-info-20150517.443/" "better-defaults-20160127.2318/" "cider-0.10.2/" "yasnippet-0.9.0.1/" "inflections-2.3/" "seq-1.11/" "s-1.11.0/" "archives/" "epl-20150517.433/" "peg-0.6/" "projectile-0.13.0/" "hydra-0.13.4.signed" "dash-20151216.1315/" "../" "seq-1.11.signed" "edn-1.1.2/")
+
+ ("/home/petras/.emacs.d/elpa/clj-refactor-2.0.0/" (22240 3541 405368 176000) "clj-refactor-pkg.el" "clj-refactor.el" "./" "clj-refactor-autoloads.el" "CHANGELOG.md" "../" "clj-refactor.elc")
+
+ ("/home/petras/gitrepositories/average-speed/src/main/clojure/average_speed/controller/" (22221 50392 282880 120000) "camera.clj" "speed_record.clj" "./" "route.clj" "plate_record.clj" "../")
+
+ ("/home/petras/gitrepositories/average-speed/src/test/clojure/average_speed/controller_test/" (22221 50350 190885 709000) "speed_record.clj" "./" "plate_record.clj" "../")
+
+ ("/home/" (21941 56622 769996 132000) "petras/" "./" "../")
+
+ ("/home/petras/gitrepositories/average-speed/src/test/resources/mock_db/" (22221 40603 529709 846000) "./" "20160219134000-plate-record.down.sql" "20160218141350-route.up.sql" "20160219134000-plate-record.up.sql" "20160218141350-route.down.sql" "20160211114000-camera.up.sql" "20160223143900-speed-entry.up.sql" "../" "20160211114000-camera.down.sql")
+
+ ("/home/petras/gitrepositories/average-speed/src/test/resources/" (22205 53736 475585 667000) "./" "mock_db/" "../")
+
+ ("/home/petras/gitrepositories/average-speed/src/test/clojure/" (22205 55069 174807 799000) "./" "average_speed/" "../")
+
+ ("/home/petras/gitrepositories/average-speed/src/test/" (22204 42431 999669 487000) "./" "resources/" "../" "clojure/")
+
+ ("/home/petras/gitrepositories/average-speed/src/main/clojure/" (22203 14904 206350 973000) "./" "average_speed/" "../")
+
+ ("/home/petras/gitrepositories/average-speed/src/main/" (22204 22305 227931 359000) "./" "resources/" "../" "clojure/")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t

@@ -1,0 +1,21 @@
+(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
+                     ("marmalade" . "http://marmalade-repo.org/packages/")
+                     ("melpa" . "http://stable.melpa.org/packages/")))
+                     
+(defvar my-packages '(better-defaults
+                      projectile
+                      clojure-mode
+                      cider
+                      clj-refactor
+                      company))
+                
+(package-initialize)
+
+(global-company-mode)
+
+(projectile-global-mode)
+
+(add-hook 'clojure-mode-hook #'smartparens-strict-mode)
+
+(auto-revert-mode)
+

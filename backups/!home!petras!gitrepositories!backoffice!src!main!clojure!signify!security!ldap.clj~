@@ -1,0 +1,43 @@
+(ns signify.security.ldap
+  (:import [org.apache.directory.ldap.client.api
+            LdapConnectionConfig
+            LdapConnectionPool
+            DefaultPoolableLdapConnectionFactory])
+  (:require [clojure.tools.logging :as log]
+            [signify.lifecycle :refer (Lifecycle)]))
+
+(defn- connection-config [host port name credentials]
+  (let [config (LdapConnectionConfig.)]
+    (.setLdapHost config host)
+    (.setLdapPort config port)
+    (when (and name credentials)
+      (.setName config name)
+      (.setCredentials config credentials))))
+
+(defn with-connection [connection func]
+  (try
+      (func connection)
+      (catch Exception e (log/error (str "Ldap connection failed: " e)))))
+
+(defrecord Ldap [cfg]
+  Lifecycle
+  (start [this _]
+    (if (:enabled cfg)
+      (let [{:keys [host port name credentials]} cfg]
+        (log/info "Starting LDAP context" cfg "...")
+        (assoc this
+               :enabled true
+               :connection (let [pool (LdapConnectionPool.
+                                       (DefaultPoolableLdapConnectionFactory.
+                                        (connection-config
+                                         (:host cfg)
+                                         (:port cfg)
+                                         (:name cfg)
+                                         (:credentials cfg))))]
+                             (.setTestOnBorrow true)
+                             pool)))
+      this))
+
+  (stop [this]
+    (when (:enabled this)
+      (.close (:connection this)))))

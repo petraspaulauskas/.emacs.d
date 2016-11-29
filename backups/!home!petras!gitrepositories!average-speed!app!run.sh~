@@ -1,0 +1,15 @@
+#!/bin/bash
+sudo docker run -d \
+-e AS_DB_CLASSNAME='org.postgresql.Driver' \
+-e AS_DB_SUBNAME='//localhost:5432/avgspeed' \
+-e AS_DB_SUBPROTOCOL='postgresql' \
+-e AS_DB_USER='officer' \
+-e AS_DB_PASSWORD='officer' \
+-e AS_HTTP_PORT='8080' \
+-e AS_CAMERA_API_PORT='8081' \
+-e AS_SYNC_INTERVAL='60000' \
+-e AS_ROUTE_VALIDATION_INTERVAL='10000' \
+-e AS_CLEANUP_START_TIME='01:00:00.000' \
+-e AS_CLEANUP_INTERVAL='1' \
+-e AS_PLATE_DISCARD_INTERVAL='60' \
+--net="host" --restart=unless-stopped clavis.lt/average-speed:0.1.0-SNAPSHOT
