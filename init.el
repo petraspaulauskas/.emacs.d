@@ -33,3 +33,5 @@
 
 (require 'neotree)
 (global-set-key [f8] 'neotree-toggle)
+
+(setq cider-boot-parameters "repl -s watch refresh")
